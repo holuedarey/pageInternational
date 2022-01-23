@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="col-xxl-7">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Cards</h5>
+                <div class="row">
+                    <div class="col-xxl-6 col-md-6">
+                        <div class="card">
+                            <div class="top-right">
+                                <p class="white margin-top">Balance</p>
+                                <p class="white margin-top-ng">$4,800</p>
+                            </div>
+
+                            <p class="card__number">**** **** **** 9846</p>
+                            <div class="card__dates">
+                                <span class="card__dates--first">
+                                    <span style="color: #aaa;"> Valid Thru </span>
+                                    <br>09/24</span>
+                                <span class="card__dates--second" style="margin-right: -65px;"><span
+                                        style="color: #aaa;">Card
+                                        Holder</span> <br> Alex Smith</span>
+                            </div>
+
+                            <div class="card__flag">
+                                <div class="card__flag--red"></div>
+                                <div class="card__flag--yellow"></div>
+                            </div>
+
+                            <div class="card__reader">
+                                <div class="card__reader--risk card__reader--risk-one"></div>
+                                <div class="card__reader--risk card__reader--risk-two"></div>
+                                <div class="card__reader--risk card__reader--risk-three"></div>
+                                <div class="card__reader--risk card__reader--risk-four"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-md-6">
+                        <nb-card class="card--design" *ngFor="let item of card; let i = index">
+                            <nb-card-body class="example-items-rows">
+                                <p class="vertical-text">{{ item.pan }}</p>
+                                <p class="vertical-text vertical-text-bottom">
+                                    <span *ngIf="item.scheme === 'Master' ">
+                                        <img src="../../../assets/images/master.png" alt="Master"
+                                            class="vertical-text-bottom-img">
+                                    </span>
+                                    <span *ngIf="item.scheme === 'Visa' ">
+                                        <img src="../../../assets/images/visa.png" alt="Visa"
+                                            class="vertical-text-bottom-img">
+                                    </span>
+                                </p>
+                            </nb-card-body>
+                        </nb-card>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xxl-5">
+        <h5>Transfer Money</h5>
+        <nb-card>
+            <nb-card-body>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p>
+                            <span style="margin-right: 8px;">
+                                <nb-icon [icon]="'credit-card-outline'" status="primary" pack="eva"></nb-icon>
+                            </span>
+                            <span class="qtrans">Quick transfer</span>
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="social">
+
+                            <a href="#" class="link facebook">
+                                <img src="../../../assets/images/lee.png" style="border-radius: 50%; width: 38px;"
+                                    alt="">
+                            </a>
+                            <a href="#" class="link facebook">
+                                <img src="../../../assets/images/jack.png" style="border-radius: 50%; width: 38px;"
+                                    alt="">
+                            </a>
+                            <a href="#" class="link facebook">
+                                <img src="../../../assets/images/nick.png" style="border-radius: 50%; width: 38px;"
+                                    alt="">
+                            </a>
+                            <a href="#" class="link facebook">
+                                <img src="../../../assets/images/kate.png" style="border-radius: 50%; width: 38px;"
+                                    alt="">
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-md-12">
+                        <nb-form-field class="col-12 my-4 zero-padding">
+                            <input autocomplete="off" nbInput fullWidth shape="semi-round" name="location"
+                                id="input-location" value="1234 4535 6742 1265" autofocus
+                                style="height:55px;  background: #efefef; letter-spacing: 3px;">
+                            <button nbSuffix nbButton shape="semi-round" status="primary" type="button"
+                                style="padding: 18px;">
+                                <nb-icon [icon]="'arrow-ios-forward-outline'" class="nb-icon-size" pack="eva">
+                                </nb-icon>
+                            </button>
+                        </nb-form-field>
+                    </div>
+                </div>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

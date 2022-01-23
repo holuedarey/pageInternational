@@ -1,0 +1,230 @@
+  :root {
+    --purple: #892a92;
+    --purple2: #70217a;
+    --white: #f6d3fd;
+    --height: 222px;
+    --width: 350px;
+    --font: "Overpass Mono", monospaced;
+    --masterFont: "Raleway", sans-serif;
+  }
+
+  .card {
+    --heightCalc: - calc((var(--height) / 2) - 10px);
+    --widthCalc: calc(var(--width) / 2);
+    height: var(--height);
+    width: var(--width);
+    min-width: var(--width);
+    background: linear-gradient(90deg, #3e2494, #5a37b8);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    position: relative;
+    top: -100px;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.6));
+    transform: translateY(calc(50% - 10px));
+  }
+
+
+  .card__reader {
+    width: 50px;
+    height: 40px;
+    background: radial-gradient(#d9a56c, #b18457);
+    border-radius: 5px;
+    position: absolute;
+    bottom: -10%;
+    right: 14%;
+    transform: translate(33px, -40px);
+    overflow: hidden;
+  }
+
+  .card__reader--risk {
+    width: 50px;
+    height: 40px;
+    border-radius: 13px;
+    background: transparent;
+    border: 1px solid #666;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .card__reader--risk-one {
+    transform: translate(37px, 15px);
+  }
+
+  .card__reader--risk-two {
+    transform: translate(15px, 30px);
+  }
+
+  .card__reader--risk-three {
+    transform: translate(-37px, -15px);
+  }
+
+  .card__reader--risk-four {
+    transform: translate(-15px, -30px);
+  }
+
+  .card__number {
+    font-family: var(--font);
+    font-size: 1.15em;
+    font-weight: normal;
+    color: var(--white);
+    letter-spacing: 6.5px;
+    text-align: center;
+    margin-left: -35px;
+    margin-bottom: 85px;
+    margin-top: 10px;
+    z-index: 1;
+    position: relative;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+  }
+
+  .top-right {
+    padding-left: 18px;
+    margin-top: 15px;
+  }
+
+  .margin-top {
+    margin-top: 10px;
+  }
+
+  .margin-top-ng {
+    margin-top: -18px;
+    font-weight: 900;
+  }
+
+
+  .card__dates {
+    position: absolute;
+    width: 40%;
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    font-family: var(--font);
+    bottom: 12%;
+    transform: translate(60px, 0px);
+    left: -42px;
+  }
+
+  .card__dates span {
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+  }
+
+  .card__name {
+    font-family: var(--font);
+    font-size: .9em;
+    font-weight: normal;
+    color: var(--white);
+    letter-spacing: 2.5px;
+    transform: translate(35px, 25px);
+    position: relative;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+  }
+
+  .card__flag {
+    top: 26%;
+    right: 1%;
+    border-radius: 28px;
+    transform: translate(0, -28px);
+    position: absolute;
+    height: 61px;
+    width: 80px;
+  }
+
+
+  .card__flag--red {
+    position: absolute;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ce0e1d;
+  }
+
+  .card__flag--yellow {
+    position: absolute;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e39833;
+  }
+
+  .card__flag--yellow::after {
+    content: "MasterCard";
+    position: absolute;
+    font-size: 0.7em;
+    top: 50%;
+    transform: translate(-25px, -7px);
+    font-family: var(--masterFont);
+    font-style: italic;
+    font-weight: 800;
+    color: var(--white);
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+  }
+
+  .white {
+    color: var(--white);
+  }
+
+  .card--design {
+    width: 86px;
+    height: 194px;
+    border-radius: 15px;
+    float: left;
+    margin-left: -7px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .vertical-text {
+    display: block;
+    -webkit-transform: rotate(270deg);
+
+    /* Firefox */
+    -moz-transform: rotate(270deg);
+
+    /* IE */
+    -ms-transform: rotate(270deg);
+
+    /* Opera */
+    -o-transform: rotate(270deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    font-weight: 900;
+
+  }
+
+  .vertical-text-bottom {
+    position: relative;
+    top: 53%;
+  }
+
+  .vertical-text-bottom-img {
+    width: 45px;
+  }
+
+  .zero-padding {
+    padding-left: 0px;
+  }
+
+  .qtrans {
+    position: relative;
+    top: -3px;
+    font-weight: 700;
+  }
+
+  a.link.facebook {
+    background: #355496;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+
+    margin-left: -7px;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* transform: translateY(-50%); */
+  }

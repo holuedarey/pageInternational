@@ -1,0 +1,29 @@
+<nb-card size="medium">
+
+  <nb-card-header>
+    
+  </nb-card-header>
+
+  <nb-list class="user-activity-list my-3">
+    <nb-list-item *ngFor="let item of userActivity">
+
+      <div class="visited-percentages">
+        <div class="icon--box">
+          <img src="../../../../assets/images/apple.svg" alt="">
+        </div>
+        <span class="icon--box-text">Apple</span>
+
+      </div>
+
+      <div class="visited-date text-price-c">
+        {{ item.date | date }}
+      </div>
+
+      <div class="visited-pages-count text-price-c">
+        <div class="value">{{ item.pagesVisitCount | currency : 'USD'}}</div>
+      </div>
+
+    </nb-list-item>
+  </nb-list>
+
+</nb-card>

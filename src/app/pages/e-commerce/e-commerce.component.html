@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-7">
+    <nb-form-field class="col-12 my-3 zero-padding">
+      <input autocomplete="off" nbInput fullWidth shape="semi-round" name="location" id="input-location"
+        placeholder="Search..." autofocus
+        style="height:55px; box-shadow: 0px 4px 7px rgb(110 110 110 / 30%); background: #fff;">
+      <button nbSuffix nbButton shape="semi-round" status="primary" type="button"
+        style="padding: 18px;">
+        <nb-icon [icon]="'search-outline'" class="nb-icon-size" pack="eva">
+        </nb-icon>
+      </button>
+    </nb-form-field>
+  </div>
+</div>
+
+<div class="div">
+  <ngx-card-details></ngx-card-details>
+</div>
+
+
+<div class="row">
+  <div class="col-xxl-7 ">
+    <h5>Transaction</h5>
+    <ngx-user-activity></ngx-user-activity>
+  </div>
+
+  <div class="col-xxl-5">
+    <h5>Transaction Statistics</h5>
+    <ngx-ecommerce-charts></ngx-ecommerce-charts>
+  </div>
+
+</div>

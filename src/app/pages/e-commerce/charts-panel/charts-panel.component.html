@@ -1,0 +1,4 @@
+<nb-card size="medium">
+  <ngx-chart-panel-header [type]="period" (periodChange)="setPeriodAndGetChartData($event)"></ngx-chart-panel-header>
+  <ngx-profit-chart #profitChart [profitChartData]="profitChartData"></ngx-profit-chart>
+</nb-card>
